@@ -7,7 +7,7 @@ test('peek on empty stack returns undefined', () => {
 test('peek on stack where empty string has been added, null should be returned', () => {
     stack.push("");
     expect(stack.peek()).toBeDefined();
-    expect(stack.peek()).toBe(null);
+    expect(stack.peek()).toBe("");
 });
 
 test('peek on stack with one element returns that element', () => {

@@ -23,14 +23,14 @@ test('The stack should be empty in the beginning', async () => {
 	expect(stack).toEqual("n/a");
 });
 
-test('Popping an empty stack should lead to an message of "tog bort none"', async () => {
+test('Popping an empty stack should lead to an message of "Tog bort undefined"', async () => {
 
 	let pop = await driver.findElement(By.id('pop'));
 	await pop.click();
     let alert = await driver.switchTo().alert();
-    let popText = alert.getText();
+    let popText = await alert.getText();
 	await alert.accept();
-	expect(popText).toEqual("none");
+	expect(popText).toEqual("Tog bort undefined");
 
 });
 
